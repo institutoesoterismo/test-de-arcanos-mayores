@@ -1,0 +1,304 @@
+TEST DE ARCANOS MAYORES
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: rgba(255, 255, 255, 0.5);
+            color: #000;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            box-sizing: border-box;
+        }
+
+        .slides-container {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+
+        .slide {
+            display: none;
+            animation: fade 1s ease-in-out;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        h2 {
+            margin: 20px 0 10px 0;
+            text-align: center;
+        }
+
+        .question {
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .options li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .options input[type="radio"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: #3C2F2F;
+        }
+
+        .controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #3C2F2F;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .results {
+            display: none;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .deck-suggestions {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <title>Test sobre los Arcanos Mayores</title>
+</head>
+<body>
+    <h2>Test sobre los Arcanos Mayores</h2>
+    <div class="slides-container">
+        <!-- Question 1 -->
+        <div class="slide" data-correct="A">
+            <p class="question">1. ¿Qué representa la carta del Loco en el Tarot?</p>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="A"> A) Nuevos comienzos y libertad.</li>
+                <li><input type="radio" name="q1" value="B"> B) Restricciones y disciplina.</li>
+                <li><input type="radio" name="q1" value="C"> C) Sabiduría y conocimiento.</li>
+            </ul>
+        </div>
+        <!-- Question 2 -->
+        <div class="slide" data-correct="B">
+            <p class="question">2. ¿Qué simboliza la carta de la Emperatriz?</p>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="A"> A) Riqueza material y estabilidad.</li>
+                <li><input type="radio" name="q2" value="B"> B) Fertilidad, creatividad y abundancia.</li>
+                <li><input type="radio" name="q2" value="C"> C) Lucha interna y perseverancia.</li>
+            </ul>
+        </div>
+        <!-- Question 3 -->
+        <div class="slide" data-correct="C">
+            <p class="question">3. ¿Qué representa la carta del Mago?</p>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="A"> A) Confusión y desorden.</li>
+                <li><input type="radio" name="q3" value="B"> B) Sabiduría ancestral y conocimiento oculto.</li>
+                <li><input type="radio" name="q3" value="C"> C) Poder personal y habilidades manifestadoras.</li>
+            </ul>
+        </div>
+        <!-- Question 4 -->
+        <div class="slide" data-correct="A">
+            <p class="question">4. ¿Qué nos indica la carta de la Torre?</p>
+            <ul class="options">
+                <li><input type="radio" name="q4" value="A"> A) Cambio repentino, ruptura o desastre.</li>
+                <li><input type="radio" name="q4" value="B"> B) Paz y serenidad interior.</li>
+                <li><input type="radio" name="q4" value="C"> C) Éxito y reconocimiento.</li>
+            </ul>
+        </div>
+        <!-- Question 5 -->
+        <div class="slide" data-correct="B">
+            <p class="question">5. ¿Cuál es el significado principal de la carta de la Muerte?</p>
+            <ul class="options">
+                <li><input type="radio" name="q5" value="A"> A) Fin de un ciclo y transformación.</li>
+                <li><input type="radio" name="q5" value="B"> B) Pérdida de algo o alguien importante.</li>
+                <li><input type="radio" name="q5" value="C"> C) Traición o deslealtad.</li>
+            </ul>
+        </div>
+        <!-- Question 6 -->
+        <div class="slide" data-correct="C">
+            <p class="question">6. ¿Qué simboliza la carta de la Sacerdotisa?</p>
+            <ul class="options">
+                <li><input type="radio" name="q6" value="A"> A) Guerra y conflicto.</li>
+                <li><input type="radio" name="q6" value="B"> B) Sabiduría externa y aprendizaje.</li>
+                <li><input type="radio" name="q6" value="C"> C) Intuición, conocimiento interior y secretos.</li>
+            </ul>
+        </div>
+        <!-- Question 7 -->
+        <div class="slide" data-correct="A">
+            <p class="question">7. ¿Qué significa la carta del Sol en el Tarot?</p>
+            <ul class="options">
+                <li><input type="radio" name="q7" value="A"> A) Éxito, alegría y claridad.</li>
+                <li><input type="radio" name="q7" value="B"> B) Oscuridad y dificultades.</li>
+                <li><input type="radio" name="q7" value="C"> C) Indecisión y confusión.</li>
+            </ul>
+        </div>
+        <!-- Question 8 -->
+        <div class="slide" data-correct="B">
+            <p class="question">8. ¿Qué representa la carta de la Estrella?</p>
+            <ul class="options">
+                <li><input type="radio" name="q8" value="A"> A) La caída y la desesperación.</li>
+                <li><input type="radio" name="q8" value="B"> B) Esperanza, renovación y serenidad.</li>
+                <li><input type="radio" name="q8" value="C"> C) Confusión y falta de dirección.</li>
+            </ul>
+        </div>
+        <!-- Question 9 -->
+        <div class="slide" data-correct="C">
+            <p class="question">9. ¿Qué simboliza la carta del Carro?</p>
+            <ul class="options">
+                <li><input type="radio" name="q9" value="A"> A) Esperanza y calma.</li>
+                <li><input type="radio" name="q9" value="B"> B) Mente clara y concentración.</li>
+                <li><input type="radio" name="q9" value="C"> C) Determinación, victoria y control.</li>
+            </ul>
+        </div>
+        <!-- Question 10 -->
+        <div class="slide" data-correct="A">
+            <p class="question">10. ¿Qué nos dice la carta de la Luna?</p>
+            <ul class="options">
+                <li><input type="radio" name="q10" value="A"> A) Ilusiones, confusión y el inconsciente.</li>
+                <li><input type="radio" name="q10" value="B"> B) Fortaleza y determinación.</li>
+                <li><input type="radio" name="q10" value="C"> C) Nueva perspectiva y claridad mental.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button id="prev" disabled>Anterior</button>
+        <button id="next" disabled>Siguiente</button>
+        <button id="restart" style="display:none;">Reiniciar Test</button>
+    </div>
+
+    <div class="results" id="results">
+        <p id="score"></p>
+        <div id="result-details"></div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        const restartButton = document.getElementById('restart');
+        const resultsDiv = document.getElementById('results');
+        const scoreText = document.getElementById('score');
+        const resultDetails = document.getElementById('result-details');
+        let currentSlide = localStorage.getItem('currentSlide') !== null ? parseInt(localStorage.getItem('currentSlide')) : 0;  // Default to 0 if no value
+        let correctAnswers = 0;
+        let userAnswers = [];
+
+        // Show the current slide on load
+        window.onload = () => {
+            showSlide(currentSlide);
+        };
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            prevButton.disabled = index === 0;
+            nextButton.disabled = !isAnswered(slides[index]);
+            nextButton.textContent = index === slides.length - 1 ? 'Finalizar' : 'Siguiente';
+            localStorage.setItem('currentSlide', index); // Save the current slide index
+        }
+
+        function isAnswered(slide) {
+            const inputs = slide.querySelectorAll('input[type="radio"]');
+            return Array.from(inputs).some(input => input.checked);
+        }
+
+        function calculateResults() {
+            let score = 0;
+            let details = '';
+            slides.forEach((slide, index) => {
+                const userAnswer = document.querySelector(`input[name="q${index + 1}"]:checked`);
+                const correctAnswer = slide.getAttribute('data-correct');
+                if (userAnswer && userAnswer.value === correctAnswer) {
+                    score++;
+                    details += `<p>Pregunta ${index + 1}: Correcta</p>`;
+                } else {
+                    details += `<p>Pregunta ${index + 1}: Incorrecta</p>`;
+                }
+            });
+            scoreText.innerHTML = `Tu puntuación: ${score} de ${slides.length} preguntas correctas.`;
+            resultDetails.innerHTML = details;
+        }
+
+        nextButton.addEventListener('click', () => {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                showSlide(currentSlide);
+            } else {
+                calculateResults();
+                resultsDiv.style.display = 'block';
+                prevButton.disabled = true;
+                nextButton.disabled = true;
+                restartButton.style.display = 'block'; // Show restart button
+            }
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        });
+
+        restartButton.addEventListener('click', () => {
+            currentSlide = 0; // Reset to first slide
+            showSlide(currentSlide);
+            resultsDiv.style.display = 'none'; // Hide results
+            restartButton.style.display = 'none'; // Hide restart button
+            prevButton.disabled = true; // Disable prev button
+            nextButton.disabled = !isAnswered(slides[currentSlide]); // Enable next button if answered
+        });
+
+        document.querySelectorAll('input[type="radio"]').forEach(input => {
+            input.addEventListener('change', () => {
+                nextButton.disabled = false;
+            });
+        });
+    </script>
+</body>
+</html>
